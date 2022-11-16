@@ -1,0 +1,36 @@
+footer{
+    position: relative;
+    width: 375px;
+    height: 209px;
+    display: flex;
+    justify-content: center;
+    background: #000000;
+}
+
+.footerLogo{
+    width: 122px;
+    height: 34px;
+    position: absolute;
+    left: 33.87%;
+    right: 33.6%;
+    top: 29.67%;
+    bottom: 51.46%;
+}
+
+.credit{
+    top: 48.33%;
+    bottom: 29.67%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 142.6%;
+    /* or 17px */
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FFFFFF;
+
+}
