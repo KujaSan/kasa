@@ -4,10 +4,12 @@
     margin: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ul{
     display: flex;
+    list-style-type: none;
 }
 
 .nav_text{
@@ -23,7 +25,7 @@ ul{
     align-items: flex-end;
     text-align: right;
     text-decoration-line: underline;
-
+    
     color: #FF6060;
 
 }
