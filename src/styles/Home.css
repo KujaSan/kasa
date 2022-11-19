@@ -4,7 +4,7 @@
     margin: 0 20px 20px 20px;
 
     background-color: rgba(0, 0, 0, 0.4);
-    background-image : url("../assets/background_banner.jpg");
+    background-image : url("../assets/home/background_banner.jpg");
     background-repeat : no-repeat;
     background-position : center;
     background-size: cover;
@@ -33,9 +33,11 @@
     margin: 0 20px 20px 20px;
     display: flex;
     align-items: flex-end;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
 }
 
-p{
+.logementTitle{
     margin: 0 20px 15px 20px;
     position: absolute;
     font-family: 'Montserrat';
@@ -45,10 +47,11 @@ p{
     line-height: 142.6%;
     /* or 26px */
     color: #FFFFFF;
-
+    z-index: 1;
 }
 .logementCover{
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    mix-blend-mode: darken;
 }
