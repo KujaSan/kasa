@@ -9,10 +9,10 @@ function Home() {
         <h1 className='title'>Chez vous,<br/> partout et ailleurs</h1>
       </section>
       <section className='section2'>
-          {logements && logements.map((logement) =>(
-              <Link key={logement.id} className='thumb'>
-                  <p className='logementTitle'>{logement.title}</p>
-                  <img src={logement.cover} alt='apercu du logement' className='logementCover'/>
+          {logements && logements.map((lodge) =>(
+              <Link key={lodge.id} to={`/Lodge?id=${lodge.id}`} className='thumb'>
+                  <p className='logementTitle'>{lodge.title}</p>
+                  <img src={lodge.cover} alt='apercu du logement' className='logementCover'/>
               </Link>
           ))}
       </section>
