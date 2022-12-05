@@ -6,33 +6,3 @@
     background-blend-mode: darken;
     border-radius: 10px;
 }
-
-.accordion{
-    width: 335px;
-    height: 30px;
-    margin: 20px;
-
-    cursor: pointer;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 142.6%;
-    border: none;
-    outline: none;
-
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    transition: 0.4s;
-    background: #FF6060;
-    border-radius: 5px;
-}
-
-.panel{
-    margin:0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition :max-height 0.2s ease-out;
-    background: #F7F7F7;
-}

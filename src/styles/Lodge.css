@@ -1,0 +1,25 @@
+h1{
+    margin:15px 20px 5px 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    /* or 26px */
+    display: flex;
+    align-items: flex-end;
+    color: #FF6060;
+}
+
+.locationMessage{
+    margin: 0 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    /* or 20px */
+    display: flex;
+    align-items: flex-end;
+    color: #FF6060;
+}

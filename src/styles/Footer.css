@@ -1,6 +1,7 @@
 footer{
     position: sticky;
     bottom: 0;
+    margin-top: 20px;
     width: 375px;
     height: 209px;
     display: flex;
@@ -20,9 +21,6 @@ footer{
 }
 
 .credit{
-    top: 48.33%;
-    bottom: 29.67%;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
