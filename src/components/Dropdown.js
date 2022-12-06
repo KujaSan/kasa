@@ -16,7 +16,7 @@ const Dropdown = (props)=>{
         <div>
             <div>
                 <button className="dropdown-header" onClick={toggleText}>
-                    {props.button}
+                    {props.head}
                     {isOpen ? (
                         <FontAwesomeIcon className="floatRight" icon={faChevronUp} />
                     ) : (
@@ -24,7 +24,7 @@ const Dropdown = (props)=>{
                     )}
                 </button>
                 {isOpen && (
-                    <p className="dropdown-panel">{props.text}</p>
+                    <div className="dropdown-panel">{props.text}</div>
                 )}
             </div>
         </div>

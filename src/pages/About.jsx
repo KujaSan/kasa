@@ -19,10 +19,10 @@ function About() {
     return (
         <div>
             <img src={banner} className='banner' alt="banner"/>
-            <Dropdown button={reliabilityButton} text={reliability} />
-            <Dropdown button={respectButton} text={respect} />
-            <Dropdown button={serviceButton} text={service} />
-            <Dropdown button={secuButton} text={secu} />
+            <Dropdown head={reliabilityButton} text={reliability} />
+            <Dropdown head={respectButton} text={respect} />
+            <Dropdown head={serviceButton} text={service} />
+            <Dropdown head={secuButton} text={secu} />
         </div>
     );
 }

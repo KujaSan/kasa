@@ -1,13 +1,14 @@
 .header{
-    width: 335px;
+    width: 90%;
     height: 47px;
-    margin: 20px;
+    margin: 20px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-ul{
+.Menu{
+    padding-left: 0;
     display: flex;
     list-style-type: none;
 }
@@ -17,15 +18,10 @@ ul{
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 142.6%;
     margin-left: 10px;
-    /* or 17px */
-
     display: flex;
     align-items: flex-end;
     text-align: right;
     text-decoration-line: underline;
-    
     color: #FF6060;
-
 }

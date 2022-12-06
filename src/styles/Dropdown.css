@@ -1,5 +1,5 @@
 .dropdown-header{
-    width: 335px;
+    width: 90%;
     height: 30px;
     margin: 20px 20px 0 20px;
 
@@ -16,14 +16,18 @@
     align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
-    transition: 0.4s;
     background: #FF6060;
     border-radius: 5px;
 }
 
 .dropdown-panel{
+    
     margin:0 20px;
     overflow: hidden;
-    transition :max-height 0.2s ease-out;
     background: #F7F7F7;
+}
+
+.dropdownList{
+    padding: 10px;
+    list-style-type: none;
 }

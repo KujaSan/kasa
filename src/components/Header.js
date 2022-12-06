@@ -11,7 +11,7 @@ function Header(){
         <div className='header'>
             <img src={logo} className='headerLogo' alt='logo de kasa' />
             <nav>
-                <ul >
+                <ul className='Menu'>
                     <li >
                         <Link to="/" className='nav_text'>
                             {acceuil.toUpperCase()}
