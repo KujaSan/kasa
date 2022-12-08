@@ -1,12 +1,12 @@
 import * as React from "react";
 import {Routes, Route} from "react-router-dom";
 
-import Header from './Header';
+import Header from '../layouts/Header';
 import Home from '../pages/Home';
 import Lodge from '../pages/Lodge';
 import About from '../pages/About';
 import Error from '../pages/Error';
-import Footer from './Footer';
+import Footer from '../layouts/Footer';
 
 
 function App(){

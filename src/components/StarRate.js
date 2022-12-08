@@ -8,7 +8,7 @@ const StarRate = (props)=>{
         <div>
             <ul className='starRate'>
                 {numbers.map((number) =>
-                    <li value={1}>
+                    <li >
                         {number <= props.rating
                             ? <StarPink />
                             :<StarGrey/>

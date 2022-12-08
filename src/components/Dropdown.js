@@ -14,19 +14,17 @@ const Dropdown = (props)=>{
 
     return(
         <div>
-            <div>
-                <button className="dropdown-header" onClick={toggleText}>
-                    {props.head}
-                    {isOpen ? (
-                        <FontAwesomeIcon className="floatRight" icon={faChevronUp} />
-                    ) : (
-                        <FontAwesomeIcon className="floatRight" icon={faChevronDown} />
-                    )}
-                </button>
-                {isOpen && (
-                    <div className="dropdown-panel">{props.text}</div>
+            <button className="dropdown-header" onClick={toggleText}>
+                {props.head}
+                {isOpen ? (
+                    <FontAwesomeIcon className="floatRight" icon={faChevronUp} />
+                ) : (
+                    <FontAwesomeIcon className="floatRight" icon={faChevronDown} />
                 )}
-            </div>
+            </button>
+            {isOpen && (
+                <div className="dropdown-panel">{props.text}</div>
+            )}
         </div>
     )
     

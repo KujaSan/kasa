@@ -4,9 +4,6 @@
     margin: 20px 20px 0 20px;
 
     cursor: pointer;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     font-size: 13px;
     line-height: 142.6%;
     border: none;
@@ -21,13 +18,23 @@
 }
 
 .dropdown-panel{
-    
+    padding: 0 10px;
+    color:#FF6060;
     margin:0 20px;
     overflow: hidden;
     background: #F7F7F7;
+    animation: 0.3s linear dropdown;
+}
+
+@keyframes dropdown {
+    from{ 
+        height: 0; 
+    }
+    to{ 
+        height: 150px;
+        }
 }
 
 .dropdownList{
-    padding: 10px;
-    list-style-type: none;
+    padding: 0;
 }

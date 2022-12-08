@@ -1,8 +1,5 @@
 h1{
     margin:15px 20px 5px 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 142.6%;
     /* or 26px */
@@ -13,9 +10,6 @@ h1{
 
 .locationMessage{
     margin: 0 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 142.6%;
     /* or 20px */
@@ -31,14 +25,10 @@ h1{
 }
 
 .tag{
-    height: 18px;
-    padding: 0 15px;
+    height: 20px;
+    padding: 0 10px;
     margin: 10px 10px 0 0;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
     font-size: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,10 +50,7 @@ h1{
 }
 
 .vendorName{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
+    text-align: end;
     color: #FF6060;
     margin-right: 10.5px;
 }

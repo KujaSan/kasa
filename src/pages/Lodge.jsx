@@ -11,6 +11,12 @@ function Lodge(){
     const lodgeItem = logements.find( lodge =>lodge.id === id);
     console.table(lodgeItem);
     
+    let fullName = lodgeItem.host.name;
+    let words = fullName.split(" ");
+    let lastName = words[0];
+    let firtName = words[1];
+    console.log(lodgeItem.pictures);
+
     return(
         <div>
             <img className="thumb" alt="placeholder" src={lodgeItem.pictures[0]}></img>
@@ -26,8 +32,9 @@ function Lodge(){
                     <StarRate rating={lodgeItem.rating} />
                 </div>
                 <div className="vendorInfo">
-                        <p className="vendorName">{lodgeItem.host.name}</p>
+                        <p className="vendorName">{lastName}<br/>{firtName}</p>
                         <img src={lodgeItem.host.picture} alt='portrait du proprietaire' className="vendorPicture"/>
+                        
                 </div>
             </div>
             <Dropdown head="Description" text={<p>{lodgeItem.description}</p>} />
