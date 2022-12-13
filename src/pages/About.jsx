@@ -1,4 +1,3 @@
-import '../styles/About.css';
 import banner from '../assets/about/gustavo-alves_Banner.png';
 import Dropdown from '../components/Dropdown';
 

@@ -1,0 +1,41 @@
+.dropdown{        
+    width: 90%;
+    margin: 20px 20px 0 20px;
+    &__header{
+        width: 100%;
+        height: 30px;
+        
+        cursor: pointer;
+        font-size: 13px;
+        line-height: 142.6%;
+        border: none;
+        outline: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FFFFFF;
+        background: #FF6060;
+        border-radius: 5px;
+    }
+
+    &__panel{
+        width: auto;
+        padding: 0 10px;
+        color:#FF6060;
+        overflow: hidden;
+        background: #F7F7F7;
+        animation: 0.3s linear dropdown;
+    }
+    @keyframes dropdown {
+        from{ 
+            height: 0; 
+        }
+        to{ 
+            height: 150px;
+            }
+    }
+    .dropdownList{
+        padding: 0;
+    }
+}

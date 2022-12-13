@@ -1,4 +1,4 @@
-footer{
+.footer{
     position: relative;
     bottom: -40px;
     margin-top: 20px;
@@ -9,15 +9,13 @@ footer{
     align-items: center;
     flex-direction: column;
     background: #000000;
-}
-
-.footerLogo{
-    width: 122px;
-    height: 34px;
-}
-
-.credit{
-    display: flex;
-    align-items: flex-end;
-    color: #FFFFFF;
+    &__logo{
+        width: 122px;
+        height: 34px;
+    }
+    &__credit{
+        display: flex;
+        align-items: flex-end;
+        color: white;
+    }
 }

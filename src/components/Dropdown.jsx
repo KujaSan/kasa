@@ -1,4 +1,3 @@
-import '../styles/Dropdown.css';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +12,8 @@ const Dropdown = (props)=>{
     };
 
     return(
-        <div>
-            <button className="dropdown-header" onClick={toggleText}>
+        <div className="dropdown">
+            <button className="dropdown__header" onClick={toggleText}>
                 {props.head}
                 {isOpen ? (
                     <FontAwesomeIcon className="floatRight" icon={faChevronUp} />
@@ -23,7 +22,7 @@ const Dropdown = (props)=>{
                 )}
             </button>
             {isOpen && (
-                <div className="dropdown-panel">{props.text}</div>
+                <div className="dropdown__panel">{props.text}</div>
             )}
         </div>
     )

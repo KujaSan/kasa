@@ -1,25 +1,24 @@
 import { useSearchParams } from "react-router-dom";
 import logements from '../datas/logements.json';
-import '../styles/Lodge.css';
+
 import Dropdown from '../components/Dropdown';
 import StarRate from "../components/StarRate";
+import Slideshow  from "../components/Slideshow";
 
 
 function Lodge(){
     let [searchParams] = useSearchParams();
     const id = searchParams.get("id");
     const lodgeItem = logements.find( lodge =>lodge.id === id);
-    console.table(lodgeItem);
     
     let fullName = lodgeItem.host.name;
     let words = fullName.split(" ");
     let lastName = words[0];
     let firtName = words[1];
-    console.log(lodgeItem.pictures);
 
     return(
         <div>
-            <img className="thumb" alt="placeholder" src={lodgeItem.pictures[0]}></img>
+            <Slideshow props={lodgeItem.pictures} />
             <h1>{lodgeItem.title}</h1>
             <h2 className="locationMessage">{lodgeItem.location}</h2>
             <div className="tagField">

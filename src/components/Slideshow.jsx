@@ -13,17 +13,19 @@ const Slideshow = ({ props }) => {
         setCurrent(current === 0 ?  - 1 : current - 1);
     };
     console.log(props);
+    
     return (
-        <div>
-            <FontAwesomeIcon className="leftArrow" onClick={prevSlide} icon={faChevronLeft} />
-            <FontAwesomeIcon className="rightArrow" onClick={nextSlide} icon={faChevronRight} />
-            {props.slides.map((slide, index) => {
-                return (
+        <div className='slideshow'>
+            <div className="slideshow__arrows">
+                <FontAwesomeIcon className="leftArrow" onClick={prevSlide} icon={faChevronLeft} />
+                <FontAwesomeIcon className="rightArrow" onClick={nextSlide} icon={faChevronRight} />
+            </div>
+            {props.map((slide,index) => (
                 <div key={index}>
-                    {index === current && <img src={slide.image} alt="" />}
+                    {index === current && <img className="slideshow__slide" src={slide} alt=""></img>}
                 </div>
-                );
-            })}
+                )
+            )}
         </div>
     );
 };
