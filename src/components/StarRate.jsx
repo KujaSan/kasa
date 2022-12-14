@@ -6,12 +6,12 @@ const StarRate = (props)=>{
     return(
         
         <div>
-            <ul className='starRate'>
+            <ul className='lodgeblock__middle__rating'>
                 {numbers.map((number) =>
                     <li >
                         {number <= props.rating
-                            ? <StarPink />
-                            :<StarGrey/>
+                            ? <StarPink className='star' />
+                            :<StarGrey className='star'/>
                         }
                     </li>
                 )}

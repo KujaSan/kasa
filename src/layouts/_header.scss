@@ -5,19 +5,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.Menu{
-    padding-left: 0;
-    display: flex;
-    list-style-type: none;
-}
-
-.nav_text{
-    margin-left: 10px;
-    display: flex;
-    align-items: flex-end;
-    text-align: right;
-    text-decoration-line: underline;
-    color: #FF6060;
+    &__menu{
+        padding-left: 0;
+        display: flex;
+        list-style-type: none;
+        &__text{
+            margin-left: 10px;
+            display: flex;
+            align-items: flex-end;
+            text-transform: uppercase;
+            text-align: right;
+            text-decoration-line: underline;
+            color: #FF6060;
+            @media screen and (min-width: 1024px){
+                font-size: 24px;
+                margin-left: 57px;
+                text-transform: none;
+            }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        margin-bottom: 70px;
+    }
 }

@@ -2,7 +2,6 @@
     width: 90%;
     height: 111px;
     margin: 0 auto 20px auto;
-
     background-color: rgba(0, 0, 0, 0.4);
     background-image : url("../assets/home/background_banner.jpg");
     background-repeat : no-repeat;
@@ -15,11 +14,20 @@
     &__title{
         margin-left: 20px;
         height: 48px;
-        width: 271px;
         font-size: 24px;
         line-height: 100%;
         /* or 24px */
-        color: #FFFFFF;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (min-width: 1024px){
+        justify-content: center;
+        height: 223px;
+        &__title{
+            font-size: 48px;
+            flex-direction: row;
+        }
     }
 }
 
@@ -40,7 +48,7 @@
             font-size: 18px;
             line-height: 142.6%;
             /* or 26px */
-            color: #FFFFFF;
+            color: white;
             z-index: 1;
         }
         &__picture{
@@ -48,6 +56,22 @@
             width: 100%;
             border-radius: 10px;
             mix-blend-mode: darken;
+            object-fit: cover;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        width: 90%;
+        margin: 0 auto;
+        background-color: $greyColor;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__card{
+            margin: 30px;
+            width: 340px;
+            height: 340px;
+            
         }
     }
 }

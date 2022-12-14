@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 p, li, h1, h2 {
   font-weight: 500;
 }
@@ -52,6 +60,7 @@ p, li {
   justify-content: center;
 }
 .slideshow__arrows {
+  color: white;
   position: absolute;
   top: 30%;
   display: flex;
@@ -69,7 +78,6 @@ p, li {
   border-radius: 10px;
   object-fit: cover;
 }
-
 .footer {
   position: relative;
   bottom: -40px;
@@ -100,20 +108,31 @@ p, li {
   justify-content: space-between;
   align-items: center;
 }
-
-.Menu {
+.header__menu {
   padding-left: 0;
   display: flex;
   list-style-type: none;
 }
-
-.nav_text {
+.header__menu__text {
   margin-left: 10px;
   display: flex;
   align-items: flex-end;
+  text-transform: uppercase;
   text-align: right;
   text-decoration-line: underline;
   color: #FF6060;
+}
+@media screen and (min-width: 1024px) {
+  .header__menu__text {
+    font-size: 24px;
+    margin-left: 57px;
+    text-transform: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    margin-bottom: 70px;
+  }
 }
 
 .banner {
@@ -177,11 +196,22 @@ p, li {
 .banner__title {
   margin-left: 20px;
   height: 48px;
-  width: 271px;
   font-size: 24px;
   line-height: 100%;
   /* or 24px */
-  color: #FFFFFF;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    justify-content: center;
+    height: 223px;
+  }
+  .banner__title {
+    font-size: 48px;
+    flex-direction: row;
+  }
 }
 
 .cardfolder__card {
@@ -201,7 +231,7 @@ p, li {
   font-size: 18px;
   line-height: 142.6%;
   /* or 26px */
-  color: #FFFFFF;
+  color: white;
   z-index: 1;
 }
 .cardfolder__card__picture {
@@ -209,35 +239,45 @@ p, li {
   width: 100%;
   border-radius: 10px;
   mix-blend-mode: darken;
+  object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .cardfolder {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .cardfolder__card {
+    margin: 30px;
+    width: 340px;
+    height: 340px;
+  }
 }
 
-h1 {
+.lodgeblock__top h1 {
   margin: 15px 20px 5px 20px;
   font-size: 18px;
   line-height: 142.6%;
-  /* or 26px */
-  display: flex;
-  align-items: flex-end;
   color: #FF6060;
 }
-
-.locationMessage {
+.lodgeblock__top h2 {
   margin: 0 20px;
   font-size: 14px;
   line-height: 142.6%;
-  /* or 20px */
   display: flex;
   align-items: flex-end;
   color: #FF6060;
 }
-
-.tagField {
+.lodgeblock__top__tagfield {
   display: flex;
   flex-direction: row;
   margin: 0 20px;
 }
-
-.tag {
+.lodgeblock__top__tagfield__tag {
   height: 20px;
   padding: 0 10px;
   margin: 10px 10px 0 0;
@@ -249,35 +289,60 @@ h1 {
   background: #FF6060;
   border-radius: 5px;
 }
-
-.middleblock {
+.lodgeblock__middle {
   margin: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-.vendorInfo {
+.lodgeblock__middle__rating {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+.lodgeblock__middle__vendor {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-.vendorName {
+.lodgeblock__middle__vendor__name {
   text-align: end;
   color: #FF6060;
   margin-right: 10.5px;
 }
-
-.vendorPicture {
+.lodgeblock__middle__vendor__picture {
   height: 32px;
   border-radius: 50%;
 }
-
-.starRate {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
+@media screen and (min-width: 1024px) {
+  .lodgeblock {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lodgeblock__top h1 {
+    font-size: 36px;
+  }
+  .lodgeblock__top h2 {
+    font-size: 18px;
+  }
+  .lodgeblock__top__tagfield__tag {
+    height: 25px;
+    font-size: 14px;
+  }
+  .lodgeblock__middle {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .lodgeblock__middle__vendor__name {
+    font-size: 18px;
+  }
+  .lodgeblock__middle__vendor__picture {
+    height: 64px;
+  }
+  .lodgeblock__middle .star {
+    height: 30px;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

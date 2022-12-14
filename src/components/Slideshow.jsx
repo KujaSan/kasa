@@ -17,8 +17,8 @@ const Slideshow = ({ props }) => {
     return (
         <div className='slideshow'>
             <div className="slideshow__arrows">
-                <FontAwesomeIcon className="leftArrow" onClick={prevSlide} icon={faChevronLeft} />
-                <FontAwesomeIcon className="rightArrow" onClick={nextSlide} icon={faChevronRight} />
+                <FontAwesomeIcon className="slideshow__arrows__left" onClick={prevSlide} icon={faChevronLeft} />
+                <FontAwesomeIcon className="slideshow__arrows__right" onClick={nextSlide} icon={faChevronRight} />
             </div>
             {props.map((slide,index) => (
                 <div key={index}>

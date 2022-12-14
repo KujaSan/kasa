@@ -1,67 +1,94 @@
-h1{
-    margin:15px 20px 5px 20px;
-    font-size: 18px;
-    line-height: 142.6%;
-    /* or 26px */
-    display: flex;
-    align-items: flex-end;
-    color: #FF6060;
-}
-
-.locationMessage{
-    margin: 0 20px;
-    font-size: 14px;
-    line-height: 142.6%;
-    /* or 20px */
-    display: flex;
-    align-items: flex-end;
-    color: #FF6060;
-}
-
-.tagField{
-    display: flex;
-    flex-direction: row;
-    margin: 0 20px;
-}
-
-.tag{
-    height: 20px;
-    padding: 0 10px;
-    margin: 10px 10px 0 0;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: #FF6060;
-    border-radius: 5px;
-}
-
-.middleblock{
-    margin: 0 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.vendorInfo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.vendorName{
-    text-align: end;
-    color: #FF6060;
-    margin-right: 10.5px;
-}
-
-.vendorPicture{
-    height: 32px;
-    border-radius: 50%;
-}
-
-.starRate{
-    padding: 0;
-    list-style-type: none;
-    display: flex;
+.lodgeblock{
+    &__top{
+        h1{
+            margin:15px 20px 5px 20px;
+            font-size: 18px;
+            line-height: 142.6%;
+            color: #FF6060;
+        }
+        h2{
+            margin: 0 20px;
+            font-size: 14px;
+            line-height: 142.6%;
+            display: flex;
+            align-items: flex-end;
+            color: #FF6060;
+        }
+        &__tagfield{
+            display: flex;
+            flex-direction: row;
+            margin: 0 20px;
+            &__tag{
+                height: 20px;
+                padding: 0 10px;
+                margin: 10px 10px 0 0;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #FFFFFF;
+                background: #FF6060;
+                border-radius: 5px;
+            }
+        }
+    }
+    &__middle{
+        margin: 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__rating{
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+        }
+        &__vendor{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &__name{
+                text-align: end;
+                color: #FF6060;
+                margin-right: 10.5px;
+            }
+            &__picture{
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        display: flex;
+        justify-content: space-between;
+        &__top{
+            h1{
+                font-size: 36px;
+            }
+            h2{
+                font-size: 18px;
+            }
+            &__tagfield{
+                &__tag{
+                    height: 25px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &__middle{
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            &__vendor{
+                &__name{
+                    font-size: 18px;
+                }
+                &__picture{
+                    height: 64px;
+                }
+            }
+            .star{
+                height: 30px;
+                width: auto;
+            }
+        }
+    }
 }
