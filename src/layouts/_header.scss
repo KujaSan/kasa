@@ -10,12 +10,13 @@
         display: flex;
         list-style-type: none;
         &__text{
+            font-size: 12px;
             margin-left: 10px;
             display: flex;
             align-items: flex-end;
             text-transform: uppercase;
             text-align: right;
-            text-decoration-line: underline;
+            
             color: #FF6060;
             @media screen and (min-width: 1024px){
                 font-size: 24px;

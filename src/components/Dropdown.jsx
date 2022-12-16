@@ -22,7 +22,7 @@ const Dropdown = (props)=>{
                 )}
             </button>
             {isOpen && (
-                <div className="dropdown__panel">{props.text}</div>
+                <p className="dropdown__panel">{props.text}</p>
             )}
         </div>
     )

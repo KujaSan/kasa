@@ -1,15 +1,20 @@
 .slideshow{
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     &__arrows{
         color: white;
         position: absolute;
-        top: 30%;
         display: flex;
         justify-content: space-between;
         margin: 0 35px;
-        width: 80%;
+        width: 85%;
         z-index: 1;
+        &__item{
+            font-size: 20px;
+        }
     }
     &__slide{
         width: 90%;
@@ -21,6 +26,16 @@
         object-fit: cover;
     }
     @media screen and (min-width: 1024px){
-        
+        width: 1240px;
+        &__arrows{
+            width: 90%;
+            &__item{
+                font-size: 80px;
+            }
+        }
+        &__slide{
+            Width: 1240px;
+            Height: 415px;
+        }
     }
 }

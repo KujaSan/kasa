@@ -6,19 +6,19 @@ const Slideshow = ({ props }) => {
     const [current, setCurrent] = useState(0);
 
     const nextSlide = () => {
-        setCurrent(current ===  - 1 ? 0 : current + 1);
+        setCurrent(current === props.length - 1 ? 0 : current + 1);
     };
 
     const prevSlide = () => {
-        setCurrent(current === 0 ?  - 1 : current - 1);
+        setCurrent(current === 0 ? props.length - 1 : current - 1);
     };
     console.log(props);
-    
+
     return (
         <div className='slideshow'>
             <div className="slideshow__arrows">
-                <FontAwesomeIcon className="slideshow__arrows__left" onClick={prevSlide} icon={faChevronLeft} />
-                <FontAwesomeIcon className="slideshow__arrows__right" onClick={nextSlide} icon={faChevronRight} />
+                <FontAwesomeIcon className="slideshow__arrows__item" onClick={prevSlide} icon={faChevronLeft} />
+                <FontAwesomeIcon className="slideshow__arrows__item" onClick={nextSlide} icon={faChevronRight} />
             </div>
             {props.map((slide,index) => (
                 <div key={index}>

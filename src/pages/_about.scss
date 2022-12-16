@@ -1,8 +1,23 @@
-.banner{
-    width: 90%;
-    height: 223px;
-    margin: 0 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: darken;
-    border-radius: 10px;
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__banner{
+        width: 90%;
+        height: 223px;
+        margin: 0 20px;
+        border-radius: 10px;
+        background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.svg");
+        @media screen and (min-width: 1024px){
+            width: 90%;
+            background-size: cover;
+            background-position: -25%;
+        }
+    }
+    &__dropdown{
+            width: 100%;
+        @media screen and (min-width: 1024px){
+            width: 80%;
+        }
+    }
 }

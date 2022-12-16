@@ -1,4 +1,3 @@
-import banner from '../assets/about/gustavo-alves_Banner.png';
 import Dropdown from '../components/Dropdown';
 
 const reliabilityButton = "fiabilité";
@@ -16,12 +15,14 @@ const secu ="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes 
 
 function About() {
     return (
-        <div>
-            <img src={banner} className='banner' alt="banner"/>
-            <Dropdown head={reliabilityButton} text={<p>{reliability}</p>} />
-            <Dropdown head={respectButton} text={<p>{respect}</p>} />
-            <Dropdown head={serviceButton} text={<p>{service}</p>} />
-            <Dropdown head={secuButton} text={<p>{secu}</p>} />
+        <div className='about'>
+            <div className='about__banner'></div>
+            <div className='about__dropdown'>
+                <Dropdown head={reliabilityButton} text={<p>{reliability}</p>} />
+                <Dropdown head={respectButton} text={<p>{respect}</p>} />
+                <Dropdown head={serviceButton} text={<p>{service}</p>} />
+                <Dropdown head={secuButton} text={<p>{secu}</p>} />
+            </div>
         </div>
     );
 }

@@ -6,7 +6,7 @@ const StarRate = (props)=>{
     return(
         
         <div>
-            <ul className='lodgeblock__middle__rating'>
+            <ul className='lodge__block__middle__rating'>
                 {numbers.map((number) =>
                     <li >
                         {number <= props.rating

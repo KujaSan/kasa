@@ -17,30 +17,30 @@ function Lodge(){
     let firtName = words[1];
 
     return(
-        <div>
+        <div className="lodge">
             <Slideshow props={lodgeItem.pictures} />
-            <section className="lodgeblock">
-                <div className="lodgeblock__top">
+            <section className="lodge__block">
+                <div className="lodge__block__top">
                     <h1>{lodgeItem.title}</h1>
                     <h2>{lodgeItem.location}</h2>
-                    <div className="lodgeblock__top__tagfield">
+                    <div className="lodge__block__top__tagfield">
                         {lodgeItem.tags.map((tag)=>(
-                            <p className="lodgeblock__top__tagfield__tag">{tag}</p>
+                            <p className="lodge__block__top__tagfield__tag">{tag}</p>
                         ))}
                     </div>
                 </div>
-                <div className="lodgeblock__middle">
+                <div className="lodge__block__middle">
                     <StarRate rating={lodgeItem.rating} />
-                    <div className="lodgeblock__middle__vendor">
-                            <p className="lodgeblock__middle__vendor__name">{lastName}<br/>{firtName}</p>
-                            <img src={lodgeItem.host.picture} alt='portrait du proprietaire' className="lodgeblock__middle__vendor__picture"/>
+                    <div className="lodge__block__middle__vendor">
+                            <p className="lodge__block__middle__vendor__name">{lastName}<br/>{firtName}</p>
+                            <img src={lodgeItem.host.picture} alt='portrait du proprietaire' className="lodge__block__middle__vendor__picture"/>
                             
                     </div>
                 </div>
             </section>
-            <section className="dropdown-container">
+            <section className="lodge__dropdowns">
                 <Dropdown head="Description" text={<p>{lodgeItem.description}</p>} />
-                <Dropdown head="Équipements" text={<ul className="dropdownList"> {lodgeItem.equipments.map((stuff)=>(
+                <Dropdown head="Équipements" text={<ul className="lodge__dropdowns__list"> {lodgeItem.equipments.map((stuff)=>(
                         <li key={stuff}>{stuff}</li>
                 ))}</ul>}/>
             </section>

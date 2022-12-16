@@ -1,3 +1,7 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat";
@@ -6,8 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p, li, h1, h2 {
+a, p, li, h1, h2 {
   font-weight: 500;
+  text-decoration: auto;
 }
 
 p, li {
@@ -15,10 +20,15 @@ p, li {
   color: #FF6060;
   list-style-type: none;
 }
+@media screen and (min-width: 1024px) {
+  p, li {
+    font-size: 18px;
+  }
+}
 
 .dropdown {
   width: 90%;
-  margin: 20px 20px 0 20px;
+  margin: 20px auto 0 auto;
 }
 .dropdown__header {
   width: 100%;
@@ -37,6 +47,7 @@ p, li {
 }
 .dropdown__panel {
   width: auto;
+  margin: 0;
   padding: 0 10px;
   color: #FF6060;
   overflow: hidden;
@@ -48,7 +59,14 @@ p, li {
     height: 0;
   }
   to {
-    height: 150px;
+    height: max-content;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dropdown__header {
+    padding: 0 20px;
+    font-size: 18px;
+    height: 52px;
   }
 }
 .dropdown .dropdownList {
@@ -56,18 +74,23 @@ p, li {
 }
 
 .slideshow {
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .slideshow__arrows {
   color: white;
   position: absolute;
-  top: 30%;
   display: flex;
   justify-content: space-between;
   margin: 0 35px;
-  width: 80%;
+  width: 85%;
   z-index: 1;
+}
+.slideshow__arrows__item {
+  font-size: 20px;
 }
 .slideshow__slide {
   width: 90%;
@@ -78,9 +101,25 @@ p, li {
   border-radius: 10px;
   object-fit: cover;
 }
+@media screen and (min-width: 1024px) {
+  .slideshow {
+    width: 1240px;
+  }
+  .slideshow__arrows {
+    width: 90%;
+  }
+  .slideshow__arrows__item {
+    font-size: 80px;
+  }
+  .slideshow__slide {
+    Width: 1240px;
+    Height: 415px;
+  }
+}
+
 .footer {
   position: relative;
-  bottom: -40px;
+  bottom: -150px;
   margin-top: 20px;
   width: 100%;
   height: 200px;
@@ -114,12 +153,12 @@ p, li {
   list-style-type: none;
 }
 .header__menu__text {
+  font-size: 12px;
   margin-left: 10px;
   display: flex;
   align-items: flex-end;
   text-transform: uppercase;
   text-align: right;
-  text-decoration-line: underline;
   color: #FF6060;
 }
 @media screen and (min-width: 1024px) {
@@ -135,13 +174,32 @@ p, li {
   }
 }
 
-.banner {
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__banner {
   width: 90%;
   height: 223px;
   margin: 0 20px;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-blend-mode: darken;
   border-radius: 10px;
+  background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.svg");
+}
+@media screen and (min-width: 1024px) {
+  .about__banner {
+    width: 90%;
+    background-size: cover;
+    background-position: -25%;
+  }
+}
+.about__dropdown {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .about__dropdown {
+    width: 80%;
+  }
 }
 
 .error {
@@ -177,6 +235,18 @@ p, li {
   text-align: right;
   text-decoration-line: underline;
   color: #FF6060;
+}
+@media screen and (min-width: 1024px) {
+  .error__title {
+    font-size: 288px;
+  }
+  .error__message {
+    font-size: 36px;
+    width: 100%;
+  }
+  .error__link {
+    font-size: 18px;
+  }
 }
 
 .banner {
@@ -258,26 +328,36 @@ p, li {
   }
 }
 
-.lodgeblock__top h1 {
-  margin: 15px 20px 5px 20px;
+.lodge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lodge__block {
+  width: 100%;
+}
+.lodge__block__top {
+  margin: 0 20px;
+}
+.lodge__block__top h1 {
+  margin: 0;
   font-size: 18px;
   line-height: 142.6%;
   color: #FF6060;
 }
-.lodgeblock__top h2 {
-  margin: 0 20px;
+.lodge__block__top h2 {
+  margin: 0;
   font-size: 14px;
   line-height: 142.6%;
   display: flex;
   align-items: flex-end;
   color: #FF6060;
 }
-.lodgeblock__top__tagfield {
+.lodge__block__top__tagfield {
   display: flex;
   flex-direction: row;
-  margin: 0 20px;
 }
-.lodgeblock__top__tagfield__tag {
+.lodge__block__top__tagfield__tag {
   height: 20px;
   padding: 0 10px;
   margin: 10px 10px 0 0;
@@ -289,59 +369,78 @@ p, li {
   background: #FF6060;
   border-radius: 5px;
 }
-.lodgeblock__middle {
+.lodge__block__middle {
   margin: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.lodgeblock__middle__rating {
+.lodge__block__middle__rating {
   padding: 0;
   list-style-type: none;
   display: flex;
 }
-.lodgeblock__middle__vendor {
+.lodge__block__middle__vendor {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.lodgeblock__middle__vendor__name {
+.lodge__block__middle__vendor__name {
   text-align: end;
   color: #FF6060;
   margin-right: 10.5px;
 }
-.lodgeblock__middle__vendor__picture {
+.lodge__block__middle__vendor__picture {
   height: 32px;
   border-radius: 50%;
 }
 @media screen and (min-width: 1024px) {
-  .lodgeblock {
+  .lodge__block {
     display: flex;
     justify-content: space-between;
+    width: 1240px;
   }
-  .lodgeblock__top h1 {
+  .lodge__block__top {
+    margin: 0;
+  }
+  .lodge__block__top h1 {
     font-size: 36px;
   }
-  .lodgeblock__top h2 {
+  .lodge__block__top h2 {
     font-size: 18px;
   }
-  .lodgeblock__top__tagfield__tag {
+  .lodge__block__top__tagfield__tag {
     height: 25px;
     font-size: 14px;
   }
-  .lodgeblock__middle {
+  .lodge__block__middle {
+    margin: 0;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
-  .lodgeblock__middle__vendor__name {
-    font-size: 18px;
+  .lodge__block__middle__vendor {
+    justify-content: flex-end;
   }
-  .lodgeblock__middle__vendor__picture {
+  .lodge__block__middle__vendor__picture {
     height: 64px;
   }
-  .lodgeblock__middle .star {
+  .lodge__block__middle .star {
     height: 30px;
     width: auto;
+  }
+}
+.lodge__dropdowns {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .lodge__dropdowns {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+  }
+  .lodge__dropdowns .dropdown {
+    width: 48%;
+    margin: 0;
   }
 }
 
