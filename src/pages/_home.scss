@@ -21,9 +21,11 @@
         display: flex;
         flex-direction: column;
     }
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1240px){
         justify-content: center;
+        width: 1240px;
         height: 223px;
+        border-radius: 25px;
         &__title{
             font-size: 48px;
             flex-direction: row;
@@ -59,11 +61,11 @@
             object-fit: cover;
         }
     }
-    @media screen and (min-width: 1024px){
-        width: 90%;
+    @media screen and (min-width: 1240px){
+        width: 1240px;
         margin: 0 auto;
         background-color: $greyColor;
-        border-radius: 10px;
+        border-radius: 25px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;

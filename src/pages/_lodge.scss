@@ -10,7 +10,7 @@
                 margin: 0;
                 font-size: 18px;
                 line-height: 142.6%;
-                color: #FF6060;
+                color: $pinkColor;
             }
             h2{
                 margin: 0;
@@ -18,7 +18,7 @@
                 line-height: 142.6%;
                 display: flex;
                 align-items: flex-end;
-                color: #FF6060;
+                color: $pinkColor;
             }
             &__tagfield{
                 display: flex;
@@ -32,7 +32,7 @@
                     align-items: center;
                     justify-content: center;
                     color: #FFFFFF;
-                    background: #FF6060;
+                    background: $pinkColor;
                     border-radius: 5px;
                 }
             }
@@ -53,7 +53,7 @@
                 align-items: center;
                 &__name{
                     text-align: end;
-                    color: #FF6060;
+                    color: $pinkColor;
                     margin-right: 10.5px;
                 }
                 &__picture{
@@ -62,7 +62,7 @@
                 }
             }
         }
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1240px){
             display: flex;
             justify-content: space-between;
             width: 1240px;
@@ -101,11 +101,20 @@
     }
     &__dropdowns{
         width: 100%;
-        @media screen and (min-width: 1024px){
+        &__list{
+            padding: 0;
+        }
+        @media screen and (min-width: 1240px){
             display: flex;
             justify-content: space-between;
             width: 1240px;
-            
+            &__text{
+                margin-top: 25px;
+            }
+            &__list{
+                margin-top: 25px;
+                
+            }
             .dropdown{
                 width: 48%;
                 margin: 0;

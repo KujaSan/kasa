@@ -41,7 +41,7 @@ p, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #FFFFFF;
+  color: white;
   background: #FF6060;
   border-radius: 5px;
 }
@@ -52,29 +52,42 @@ p, li {
   color: #FF6060;
   overflow: hidden;
   background: #F7F7F7;
-  animation: 0.3s linear dropdown;
+  position: relative;
+  top: -5px;
+  z-index: -1;
 }
-@keyframes dropdown {
-  from {
-    height: 0;
-  }
-  to {
-    height: max-content;
-  }
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .dropdown__header {
     padding: 0 20px;
     font-size: 18px;
     height: 52px;
+    border-radius: 10px;
+  }
+  .dropdown__panel {
+    margin-top: 10px;
+    border-radius: 10px;
+    top: -25px;
   }
 }
-.dropdown .dropdownList {
-  padding: 0;
-}
 
+@keyframes dropdownOpen {
+  from {
+    height: 0;
+  }
+  to {
+    height: 140px;
+  }
+}
+@keyframes dropdownClose {
+  from {
+    height: 140px;
+  }
+  to {
+    height: 0;
+  }
+}
 .slideshow {
-  width: 100%;
+  width: 355px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -90,7 +103,11 @@ p, li {
   z-index: 1;
 }
 .slideshow__arrows__item {
+  cursor: pointer;
   font-size: 20px;
+}
+.slideshow__text {
+  display: none;
 }
 .slideshow__slide {
   width: 90%;
@@ -101,7 +118,7 @@ p, li {
   border-radius: 10px;
   object-fit: cover;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .slideshow {
     width: 1240px;
   }
@@ -111,9 +128,19 @@ p, li {
   .slideshow__arrows__item {
     font-size: 80px;
   }
+  .slideshow__text {
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    bottom: 30px;
+    width: 100%;
+    color: white;
+    display: block;
+  }
   .slideshow__slide {
     Width: 1240px;
     Height: 415px;
+    border-radius: 25px;
   }
 }
 
@@ -161,15 +188,16 @@ p, li {
   text-align: right;
   color: #FF6060;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .header__menu__text {
     font-size: 24px;
     margin-left: 57px;
     text-transform: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .header {
+    max-width: 1240px;
     margin-bottom: 70px;
   }
 }
@@ -184,21 +212,25 @@ p, li {
   height: 223px;
   margin: 0 20px;
   border-radius: 10px;
-  background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.svg");
+  background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.jpg");
+  background-size: cover;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .about__banner {
-    width: 90%;
-    background-size: cover;
-    background-position: -25%;
+    background-image: url("../assets/about/kalen-emsley-Bkci_8qcdvQ-desktop.jpg");
+    width: 1240px;
+    border-radius: 25px;
   }
 }
 .about__dropdown {
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+.about__dropdown__text {
+  margin: 25px 0;
+}
+@media screen and (min-width: 1240px) {
   .about__dropdown {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -236,7 +268,7 @@ p, li {
   text-decoration-line: underline;
   color: #FF6060;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .error__title {
     font-size: 288px;
   }
@@ -273,10 +305,12 @@ p, li {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .banner {
     justify-content: center;
+    width: 1240px;
     height: 223px;
+    border-radius: 25px;
   }
   .banner__title {
     font-size: 48px;
@@ -311,12 +345,12 @@ p, li {
   mix-blend-mode: darken;
   object-fit: cover;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .cardfolder {
-    width: 90%;
+    width: 1240px;
     margin: 0 auto;
     background-color: #F7F7F7;
-    border-radius: 10px;
+    border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -394,7 +428,7 @@ p, li {
   height: 32px;
   border-radius: 50%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1240px) {
   .lodge__block {
     display: flex;
     justify-content: space-between;
@@ -432,11 +466,20 @@ p, li {
 .lodge__dropdowns {
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+.lodge__dropdowns__list {
+  padding: 0;
+}
+@media screen and (min-width: 1240px) {
   .lodge__dropdowns {
     display: flex;
     justify-content: space-between;
     width: 1240px;
+  }
+  .lodge__dropdowns__text {
+    margin-top: 25px;
+  }
+  .lodge__dropdowns__list {
+    margin-top: 25px;
   }
   .lodge__dropdowns .dropdown {
     width: 48%;

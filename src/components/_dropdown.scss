@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #FFFFFF;
+        color: white;
         background: #FF6060;
         border-radius: 5px;
     }
@@ -23,28 +23,43 @@
         width: auto;
         margin: 0;
         padding: 0 10px;
-        color:#FF6060;
+        color:$pinkColor;
         overflow: hidden;
-        background: #F7F7F7;
-        animation: 0.3s linear dropdown;
+        background: $greyColor;
+        position: relative;
+        top: -5px;
+        z-index: -1;
     }
-    @keyframes dropdown {
-        from{ 
-            height: 0; 
-        }
-        to{ 
-            height: max-content;
-            }
-    }
-    @media screen and (min-width: 1024px){
+    
+    @media screen and (min-width: 1240px){
         
         &__header{
             padding:0 20px;
             font-size: 18px;
             height: 52px;
+            border-radius: 10px;
+        }
+        &__panel{
+            margin-top:10px;
+            border-radius: 10px;
+            top: -25px;
         }
     }
-    .dropdownList{
-        padding: 0;
+}
+
+@keyframes dropdownOpen {
+    from {
+        height: 0;
+    }
+    to {
+        height: 140px;
+    }
+}
+@keyframes dropdownClose {
+    from {
+        height: 140px;
+    }
+    to {
+        height: 0;
     }
 }

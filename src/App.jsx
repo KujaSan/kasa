@@ -8,6 +8,11 @@ import About from './pages/About';
 import Error from './pages/Error';
 import Footer from './layouts/Footer';
 
+/**
+  * Composant principal de l'application.
+  *
+  * @returns {JSX.Element} Élément JSX du composant App.
+*/
 
 function App(){
     return(

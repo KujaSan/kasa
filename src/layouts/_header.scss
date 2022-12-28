@@ -17,15 +17,16 @@
             text-transform: uppercase;
             text-align: right;
             
-            color: #FF6060;
-            @media screen and (min-width: 1024px){
+            color: $pinkColor;
+            @media screen and (min-width: 1240px){
                 font-size: 24px;
                 margin-left: 57px;
                 text-transform: none;
             }
         }
     }
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1240px){
+        max-width: 1240px;
         margin-bottom: 70px;
     }
 }

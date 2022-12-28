@@ -7,17 +7,21 @@
         height: 223px;
         margin: 0 20px;
         border-radius: 10px;
-        background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.svg");
-        @media screen and (min-width: 1024px){
-            width: 90%;
-            background-size: cover;
-            background-position: -25%;
+        background-image: url("../assets/about/gustavo-alves-YOXSC4zRcxw-mobile.jpg");
+        background-size: cover;
+        @media screen and (min-width: 1240px){
+            background-image: url("../assets/about/kalen-emsley-Bkci_8qcdvQ-desktop.jpg");
+            width: 1240px;
+            border-radius: 25px;
         }
     }
     &__dropdown{
             width: 100%;
-        @media screen and (min-width: 1024px){
-            width: 80%;
+            &__text{
+                margin: 25px 0;
+            }
+        @media screen and (min-width: 1240px){
+            width: 70%;
         }
     }
 }

@@ -18,7 +18,7 @@
         font-size: 18px;
         line-height: 142.6%;
         /* or 26px */
-        color: #FF6060;
+        color: $pinkColor;
     }
     &__link{
         font-size: 14px;
@@ -30,9 +30,9 @@
         text-align: right;
         text-decoration-line: underline;
         
-        color: #FF6060;
+        color: $pinkColor;
     }
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1240px){
         &__title{
             font-size: 288px;
         }

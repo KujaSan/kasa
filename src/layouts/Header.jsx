@@ -2,9 +2,15 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/headerLogo.svg';
 
+/**
+  * Composant représentant l'entête de page de l'application
+  * @returns {JSX.Element} Élément JSX du composant Header
+*/
+
 function Header(){
     const acceuil = 'Accueil';
     const propos = 'A Propos';
+    // Style à appliquer au lien actif
     let activeStyle = {
         textDecoration: "underline",
     };
