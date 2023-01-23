@@ -29,8 +29,17 @@
         position: relative;
         top: -5px;
         z-index: -1;
+        transition: max-height 0.3s ease-out;
+        max-height: 0;
+        /* animation pour l'ouverture du dropdown */
+        &.open {
+            max-height: 300px;
+        }
+        /* animation pour la fermeture du dropdown */
+        &.closed {
+            max-height: 0px;
+        }
     }
-    
     @media screen and (min-width: 1240px){
         
         &__header{

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
+    <div className='home'>
       <section className='banner'>
         <h1 className='banner__title'><span>Chez vous, </span> <span>partout et ailleurs</span></h1>
       </section>

@@ -30,10 +30,13 @@ const Slideshow = ({ props }) => {
 
     return (
         <div className='slideshow'>
-            <div className="slideshow__arrows">
-                <FontAwesomeIcon className="slideshow__arrows__item" onClick={prevSlide} icon={faChevronLeft} />
-                <FontAwesomeIcon className="slideshow__arrows__item" onClick={nextSlide} icon={faChevronRight} />
-            </div>
+            {/* Affiche les flèches de navigation seulement s'il y a plus d'une image dans le diaporama */}
+            {props.length > 1 &&
+                <div className="slideshow__arrows">
+                    <FontAwesomeIcon className="slideshow__arrows__item" onClick={prevSlide} icon={faChevronLeft} />
+                    <FontAwesomeIcon className="slideshow__arrows__item" onClick={nextSlide} icon={faChevronRight} />
+                </div>
+            }
             {/* Affiche chaque image du diaporama. */}
             {props.map((slide,index) => (
                 <div key={index}>

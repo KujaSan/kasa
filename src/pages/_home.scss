@@ -1,3 +1,8 @@
+.home{
+    @include container-fixing;
+    text-align: left;
+}
+
 .banner{
     width: 90%;
     height: 111px;
@@ -28,7 +33,7 @@
         border-radius: 25px;
         &__title{
             font-size: 48px;
-            flex-direction: row;
+            display: block;
         }
     }
 }

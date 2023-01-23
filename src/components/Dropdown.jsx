@@ -14,11 +14,11 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const Dropdown = (props)=>{
     // Initialisation de l'état du dropdown à fermé
     const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
     // Fonction de changement de l'état du dropdown (ouvert ou fermé)
     const toggleText = () => {
         setIsOpen(!isOpen);
     };
-
     return(
         <div className="dropdown">
             {/* Bouton titre du dropdown, qui appelle la fonction toggleText lorsqu'on le clique */}
@@ -33,7 +33,7 @@ const Dropdown = (props)=>{
             </button>
             {isOpen && (
                 // Le contenu de ce bloc ne s'affiche que si isOpen est vrai (true)
-                <div className="dropdown__panel" style={{ animation: isOpen ? '0.3s linear dropdownOpen' : '0.3s linear dropdownClose',}}>
+                <div className={`dropdown__panel ${isOpen ? 'open' : 'closed'}`}>
                     {props.text}
                 </div>
             )}
