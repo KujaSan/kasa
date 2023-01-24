@@ -39,12 +39,12 @@ const Slideshow = ({ props }) => {
             }
             {/* Affiche chaque image du diaporama. */}
             {props.map((slide,index) => (
-                <div key={index}>
+                <div  key={index}>
                     {/* Affiche l'image et l'indice actuel si l'image est l'image actuelle du diaporama. */}
                     {index === current 
-                        && <div>
-                            <p className="slideshow__text">{index + 1} / {props.length}</p>
-                            <img className="slideshow__slide" src={slide} alt=""></img>
+                        && <div className="slideshow__slide">
+                            <p className="slideshow__slide__text">{index + 1} / {props.length}</p>
+                            <img className="slideshow__slide__picture" src={slide} alt=""></img>
                         </div>
                     }
                 </div>
