@@ -1,0 +1,32 @@
+.header{
+    width: 90%;
+    height: 47px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menu{
+        padding-left: 0;
+        display: flex;
+        list-style-type: none;
+        &__text{
+            font-size: 12px;
+            margin-left: 10px;
+            display: flex;
+            align-items: flex-end;
+            text-transform: uppercase;
+            text-align: right;
+            
+            color: $pinkColor;
+            @media screen and (min-width: 1240px){
+                font-size: 24px;
+                margin-left: 57px;
+                text-transform: none;
+            }
+        }
+    }
+    @media screen and (min-width: 1240px){
+        max-width: 1240px;
+        margin-bottom: 70px;
+    }
+}

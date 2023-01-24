@@ -1,0 +1,85 @@
+.home{
+    @include container-fixing;
+    text-align: left;
+}
+
+.banner{
+    width: 90%;
+    height: 111px;
+    margin: 0 auto 20px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image : url("../assets/home/background_banner.jpg");
+    background-repeat : no-repeat;
+    background-position : center;
+    background-size: cover;
+    background-blend-mode: darken;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    &__title{
+        margin-left: 20px;
+        height: 48px;
+        font-size: 24px;
+        line-height: 100%;
+        /* or 24px */
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (min-width: 1240px){
+        justify-content: center;
+        width: 1240px;
+        height: 223px;
+        border-radius: 25px;
+        &__title{
+            font-size: 48px;
+            display: block;
+        }
+    }
+}
+
+.cardfolder{
+    &__card{
+        position: relative;
+        width: 90%;
+        height: 255px;
+        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        border-radius: 10px;
+        object-fit: cover;
+        &__title{
+            margin: 0 20px 15px 20px;
+            position: absolute;
+            font-size: 18px;
+            line-height: 142.6%;
+            /* or 26px */
+            color: white;
+            z-index: 1;
+        }
+        &__picture{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            mix-blend-mode: darken;
+            object-fit: cover;
+        }
+    }
+    @media screen and (min-width: 1240px){
+        width: 1240px;
+        margin: 0 auto;
+        background-color: $greyColor;
+        border-radius: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__card{
+            margin: 30px;
+            width: 340px;
+            height: 340px;
+            
+        }
+    }
+}
+

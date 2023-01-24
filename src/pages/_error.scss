@@ -1,0 +1,47 @@
+.error{
+    @include container-fixing;
+    &__title{
+        margin-top: 90px;
+        margin-bottom: 10px;
+        width: unset;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 142.6%;
+        /* or 137px */
+        color: $pinkColor;
+    }
+    &__message{
+        width: 260px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 142.6%;
+        /* or 26px */
+        color: $pinkColor;
+    }
+    &__link{
+        font-size: 14px;
+        line-height: 142.6%;
+        margin:  133px 0 20px 0;
+        /* or 17px */
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+        text-decoration-line: underline;
+        
+        color: $pinkColor;
+    }
+    @media screen and (min-width: 1240px){
+        &__title{
+            font-size: 288px;
+        }
+        &__message{
+            font-size: 36px;
+            width: 100%;
+        }
+        &__link{
+            font-size: 18px;
+        }
+    }
+}
+
+
