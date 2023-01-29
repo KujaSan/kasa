@@ -17,6 +17,7 @@
             font-size: 20px;
         }
     }
+    /* fix de la largeur de la div contenant le slide en cours */
     div:has(.slideshow__slide){
         width: 100%;
     }
@@ -54,6 +55,7 @@
                 display: block;
             }
             &__picture{
+                margin: 0;
                 Width: 1240px;
                 Height: 415px;
                 border-radius: 25px;

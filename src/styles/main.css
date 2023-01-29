@@ -108,6 +108,7 @@ p, li {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* fix de la largeur de la div contenant le slide en cours */
 }
 .slideshow__arrows {
   color: white;
@@ -160,6 +161,7 @@ p, li {
     display: block;
   }
   .slideshow__slide__picture {
+    margin: 0;
     Width: 1240px;
     Height: 415px;
     border-radius: 25px;
