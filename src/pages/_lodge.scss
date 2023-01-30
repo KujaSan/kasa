@@ -1,9 +1,8 @@
 .lodge{
     @include container-fixing;
     &__block{
-        width: 100%;
+        width: 90%;
         &__top{
-            margin: 0 20px;
             h1{
                 margin: 0;
                 font-size: 18px;
@@ -36,7 +35,6 @@
             }
         }
         &__middle{
-            margin: 0 20px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
